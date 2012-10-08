@@ -1472,6 +1472,7 @@ status_t ACodec::setSupportedOutputFormat() {
            || format.eColorFormat == OMX_TI_COLOR_FormatYUV420PackedSemiPlanar
            || format.eColorFormat == OMX_QCOM_COLOR_FormatYVU420SemiPlanar
 #ifdef QCOM_HARDWARE
+           || format.eColorFormat == OMX_QCOM_COLOR_FormatYUV420PackedSemiPlanar32m
            || format.eColorFormat == OMX_QCOM_COLOR_FormatYVU420PackedSemiPlanar32m4ka
            || format.eColorFormat == OMX_QCOM_COLOR_FormatYUV420PackedSemiPlanar64x32Tile2m8ka
 #endif
