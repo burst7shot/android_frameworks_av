@@ -250,6 +250,7 @@ static VideoFrame *extractVideoFrameWithCodecFlags(
         case OMX_QCOM_COLOR_FormatYVU420SemiPlanar:
         case OMX_COLOR_FormatYUV420SemiPlanar:
         case OMX_QCOM_COLOR_FormatYUV420PackedSemiPlanar64x32Tile2m8ka:
+        case OMX_QCOM_COLOR_FormatYUV420PackedSemiPlanar32m:
             {
                 frame_width_rounded = ((frame->mWidth + 3)/4)*4;
                 break;
@@ -429,7 +430,8 @@ VideoFrame *StagefrightMetadataRetriever::getFrameAtTime(
             && (!strncmp(value, "msm8660", sizeof("msm8660") - 1) ||
                 !strncmp(value, "msm8960", sizeof("msm8960") - 1) ||
                 !strncmp(value, "msm7x27a", sizeof("msm7x27a") - 1) ||
-                !strncmp(value, "msm7x30", sizeof("msm7x30") - 1) )) {
+                !strncmp(value, "msm7630", sizeof("msm7630") - 1) ||
+                !strncmp(value, "msm8974", sizeof("msm8974") - 1) )) {
             flags |= OMXCodec::kEnableThumbnailMode | OMXCodec::kHardwareCodecsOnly;
         }
 #endif
